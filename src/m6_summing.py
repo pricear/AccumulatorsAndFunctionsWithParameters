@@ -11,7 +11,7 @@ import math
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_cosines()
-    run_test_sum_square_roots()
+   # run_test_sum_square_roots()
 
 
 def run_test_sum_cosines():
