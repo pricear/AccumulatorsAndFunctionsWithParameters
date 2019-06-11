@@ -11,7 +11,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_powers()
-    #run_test_sum_powers_in_range()
+    run_test_sum_powers_in_range()
 
 
 def run_test_sum_powers():
@@ -87,6 +87,23 @@ def run_test_sum_powers_in_range():
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected = 14
+    answer = sum_powers_in_range(1, 3, 2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 2275
+    answer = sum_powers_in_range(2, 6, 4)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 1296
+    answer = sum_powers_in_range(5, 8, 3)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
 
 def sum_powers_in_range(m, n, p):
     """
@@ -108,6 +125,10 @@ def sum_powers_in_range(m, n, p):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
 
+    total = 0
+    for k in range(m,n,1):
+        total = total + (k + 1) ** p
+        return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.

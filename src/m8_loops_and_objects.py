@@ -17,12 +17,12 @@ def main():
     # Test your functions by putting calls to them here:
     #print_sequence1()
     #draw_circles1()
-    #print_sequence2()
-    #draw_circles2()
+    print_sequence2()
+    draw_circles2()
     #print_sequence3()
     #draw_circles3()
     #print_cosines()
-    draw_cosines_and_sines()
+    #draw_cosines_and_sines()
 
 def print_sequence1():
     """
@@ -90,7 +90,7 @@ def print_sequence2():
       390.
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # Done: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -99,8 +99,8 @@ def print_sequence2():
     print('Running print_sequence2:')
     print('--------------------------------------------------')
 
-    for k in range(21):
-        print((k*20)+21)
+    for k in range(18):
+        print((k*20)+50)
 
 def draw_circles2():
     """
@@ -113,7 +113,7 @@ def draw_circles2():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function, per its doc-string above.
+    # Done: 5. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -123,9 +123,10 @@ def draw_circles2():
     print('--------------------------------------------------')
     window = rg.RoseWindow(400, 400)
 
-    center = rg.Point(200, 200)
-    for k in range(21):
-        circle = rg.Circle(center, 10 * k)
+
+    for k in range(18):
+        center = rg.Point(k*20+50, 100)
+        circle = rg.Circle(center, 10 )
         circle.attach_to(window)
         window.render(0.05)
 
